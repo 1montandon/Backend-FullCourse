@@ -20,3 +20,17 @@ Content-Type: application/json
     "username": "gilgamehse@gmail.com",
     "password": "123123123"
 } 
+
+### Fetch all todos GET /TODOS (protected)
+
+GET http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ0NTc3MDkwLCJleHAiOjE3NDQ2NjM0OTB9.BEtRx72mX1GS1TPfQJs4vn8I8YtvVtAbnqzF-5iOoqY
+
+### Create a todo POST /TODOS (protected)
+POST http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ0NTc3MDkwLCJleHAiOjE3NDQ2NjM0OTB9.BEtRx72mX1GS1TPfQJs4vn8I8YtvVtAbnqzF-5iOoqY
+Content-Type: application/json
+
+{
+    "task": "Teste Task"
+}

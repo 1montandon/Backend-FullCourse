@@ -10,6 +10,7 @@ function authMiddleware(req, res, next){
     jwt.verify(token, process.env.JWT_SECRET, (err, decoded) => {
         if (err) {return res.status(401).json({message: "Invalid Token"})}
         req.userId = decoded.id
+        console.log(req.userId)
         next()
     })
 }
