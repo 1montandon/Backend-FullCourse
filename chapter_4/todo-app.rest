@@ -1,0 +1,50 @@
+### GET /
+GET http://localhost:5000
+
+### Register a user POST /AUTH/REGISTER
+POST http://localhost:5000/auth/register
+Content-Type: application/json
+
+{
+    "username": "gilgamehse@gmail.com",
+    "password": "123123123"
+} 
+
+
+### Login a user POST /AUTH/REGISTER
+
+POST http://localhost:5000/auth/login
+Content-Type: application/json
+
+{
+    "username": "gilgamehse@gmail.com",
+    "password": "123123123"
+} 
+
+### Fetch all todos GET /TODOS (protected)
+
+GET http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ1MDE0NzE0LCJleHAiOjE3NDUxMDExMTR9.wpl5BszqqeAz_AE8Th84W49VayWxx2kUS8hj_DL6elA
+
+### Create a todo POST /TODOS (protected)
+POST http://localhost:5000/todos
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ1MDE0NzE0LCJleHAiOjE3NDUxMDExMTR9.wpl5BszqqeAz_AE8Th84W49VayWxx2kUS8hj_DL6elA
+Content-Type: application/json
+
+{
+    "task": "Teste Task"
+}
+
+### Update a todo PUT /TODO/:ID (protected)
+PUT http://localhost:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ1MDE0NzE0LCJleHAiOjE3NDUxMDExMTR9.wpl5BszqqeAz_AE8Th84W49VayWxx2kUS8hj_DL6elA
+Content-Type: application/json
+
+{
+    "completed": 1
+}
+
+### DELETE a todo DELETE /TODO/:ID (protected)
+DELETE http://localhost:5000/todos/2
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzQ1MDE0NzE0LCJleHAiOjE3NDUxMDExMTR9.wpl5BszqqeAz_AE8Th84W49VayWxx2kUS8hj_DL6elA
+
